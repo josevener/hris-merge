@@ -12,6 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+<<<<<<< HEAD
         $middleware->api(prepend: [
             \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
         ]);
@@ -20,6 +21,8 @@ return Application::configure(basePath: dirname(__DIR__))
             'verified' => \App\Http\Middleware\EnsureEmailIsVerified::class,
         ]);
 
+=======
+>>>>>>> 1cc7961a0275a520ace0f4cb4b128714a70e7e6f
         //
     })
     ->withExceptions(function (Exceptions $exceptions) {
